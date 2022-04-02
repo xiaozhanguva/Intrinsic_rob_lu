@@ -151,8 +151,8 @@ parser.add_argument('--epoch_decay_start', type=int, default=80,
                          'starting to decay the learning rate.')
 parser.add_argument('--turn-off-save-checkpoint', action='store_true',
                     help='Prevents saving model at every epoch of training.')
-parser.add_argument('--model-dir', type=str, default='./models',
-                    help='path to saved pretrained models')
+# parser.add_argument('--model-dir', type=str, default='./models',
+#                     help='path to saved pretrained models')
 parser.add_argument('--prob_dir', type=str, default='./probs',
                     help='path to saved probability numpy arrays')
 best_acc1 = 0
