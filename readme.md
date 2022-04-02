@@ -11,7 +11,7 @@ The code was developed using Python3 on [Anaconda](https://www.anaconda.com/down
 
 * Install other dependencies:
     ```
-    pip install torch waitGPU imageio
+    pip install waitGPU && conda install -c conda-forge cleanlab imageio 
     ```
 <br />
 
