@@ -75,8 +75,8 @@ parser.add_argument('--fig_dir', type=str, default='./figs',
                     help='path to save figures')
 parser.add_argument('--img_dir', type=str, default='./images',
                     help='path to save images')
-parser.add_argument('--model_dir', type=str, default='.',
-                    help='path to saved pretrained models')
+# parser.add_argument('--model_dir', type=str, default='.',
+#                     help='path to saved pretrained models')
 parser.add_argument('--save_dir', type=str, default='./saved',
                     help='path to save results')
 parser.add_argument('--prune', default='conf_joint', type=str, 
@@ -165,7 +165,7 @@ if args.arch.startswith('alexnet') or args.arch.startswith('vgg'):
 else:
     model = torch.nn.DataParallel(model).cuda()
 
-checkpoint = torch.load(args.model_dir+"/model_"+args.arch+"_best.pth.tar")
+checkpoint = torch.load("model_"+args.arch+"_best.pth.tar")
 model.load_state_dict(checkpoint['state_dict'])
 
 psx = get_probs(test_loader, model, args)   # compute model predicted probs
